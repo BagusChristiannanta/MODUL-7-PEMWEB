@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented Programing Javascript</title>
+</head>
+<body>
+    <h1>Belajar Javascript: object oriented programing</h1>
+    <script>
+        class Alatmasak{
+            constructor(nama){
+                this.nama = nama
+            }
+            active() {
+                return `gunakan ${this.nama} telah active`
+            }
+            memasak(bahan){
+                return `menyiapkan ${bahan} dengan menggunakan ${this.nama}`
+            }
+        }
+        let alatmask = new Alatmasak ("kompor");
+        console.log(alatmask.active())
+        console.log(alatmask.memasak("ayam"))
+        let alatmask1 = new Alatmasak("ricecooker")
+        console.log(alatmask1.active())
+        console.log(alatmask1.memasak("nasi"))
+    </script>
+</body>
+</html>

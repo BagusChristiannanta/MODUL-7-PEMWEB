@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+  
+section {
+    background-color: #dadada;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+  
+section form {
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+}
+  
+section form label {
+    display: block;
+    margin-bottom: 5px;
+}
+   
+section form .input-group {
+    margin-bottom: 20px;
+}
+  
+section form input,
+section form select {
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    border-radius: 5px;
+}
+  
+section form button {
+    width: 100%;
+    display: block;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    background-color: brown;
+    border-radius: 5px;
+    color: white;
+}
+  
+section form button:hover {
+    cursor: pointer;
+}
+    
+small {
+    color: blue;
+}
+  

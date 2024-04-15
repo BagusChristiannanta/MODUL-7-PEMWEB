@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Built in function </title>
+</head>
+<body>
+    <h1>Belajar Javascript Built in function</h1>
+    <script>
+        console.log("The bigest Number in javascript", Number.MAX_VALUE)
+        console.log("The smallest Number in javascript", Number.MIN_VALUE)
+        let angka = "10"
+        console.log(typeof angka)
+        console.log(typeof Number(angka))
+        console.log("Pi in javascript", Math.PI)
+        console.log("Euler number", Math.E)
+        let foo = 4.4
+        console.log("Round",Math.round(foo))
+        foo = 4.6
+        console.log("Round",Math.round(foo))
+        foo = 4.5
+        console.log("Ceil",Math.ceil(foo))
+        foo = 4.5
+        console.log("Floor",Math.floor(foo))
+        console.log("Random",Math.round(Math.random() * 10))
+        console.log("Pow",Math.pow(8,2))
+        let text1 = "   HELLO  WORLD!  ";
+        console.log(text1)
+        let text2 = text1.trim();
+        console.log(text2)
+        let username = "Bagus Christiannanta"
+        console.log(username.toLowerCase())
+        console.log(username.length)
+        let a = new Array("c", "d", "e")
+        let b = ["a", "b", "f"]
+        let h = true
+        console.log(Array.isArray(a))
+        console.log(Array.isArray(b))
+        console.log(Array.isArray(h))
+        a.forEach(element => {
+            console.log("array a " + element)
+        });
+        for (let i = 0; i < b.element; i++){
+        const element = b[i]
+        console.log("array b " +element)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM VALIDATION | JAVA SCRIPT</title>
+    <style>
+        .input {
+            height: 24px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="get" id="form">
+        <div style="display: flex; flex-direction: column; width: 200px; padding-bottom: 14px;">
+            <label for="username" style="font-size: 18px;">Username</label>
+            <input type="text" id="username" placeholder="Masukkan username ..." class="input">
+            <span id="UsernameSpan" style="color: red; font-size: 16px;"></span>
+        </div>
+        <div style="display: flex; flex-direction: column; width: 200px; padding-bottom: 14px;">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Masukkan password ..." class="input"">
+            <span id="PasswordSpan" style="color: red; font-size: 16px;" "></span>
+        </div>
+        <button type="submit">Login </button>
+    </form>
+    <script>
+        let form = document.getElementById("form")
+        let usernameInput = document.getElementById("username")
+        let usernameSpan = document.getElementById("UsernameSpan")
+
+        let passwordInput = document.getElementById("password")
+        let passwordSpan = document.getElementById("PasswordSpan")
+
+        function hapusError(e) {
+            e.target.style = "border: solid black 2px"
+            e.target.parentElement.lastElementChild.innerHTML = "";
+        }
+
+        form.addEventListener("submit", submit)
+        usernameInput.addEventListener("focus", hapusError)
+        passwordInput.addEventListener("focus", hapusError)
+
+        function submit(e) {
+            let usernameError = ""
+            if (usernameInput.value.trim() === "") {
+                usernameError = "Username tidak boleh kosong"
+                usernameSpan.innerText = usernameError
+                usernameInput.style = "border: solid red 2px"
+            }
+
+            let passwordError = ""
+            if (passwordInput.value.trim() === "") {
+                passwordError = "Password tidak boleh kosong"
+                passwordSpan.innerText = passwordError
+                passwordInput.style = "border: solid red 2px"
+            } else if (passwordInput.value.length < 6) {
+                passwordError = "Panjang password tidak boleh kurang dari 6 karakter"
+                passwordSpan.innerText = passwordError
+                passwordInput.style = "border: solid red 2px"
+            }
+
+            if (passwordError) {
+                passwordSpan.innerText = passwordError
+                passwordInput.style = "border: solid red 2px"
+            }
+            if (usernameError && passwordError) {
+                e.preventDefault()
+            }
+        }
+    </script>
+</body>
+</html>
